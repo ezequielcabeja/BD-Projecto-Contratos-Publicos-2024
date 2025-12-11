@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Quantidade de Contratos por Tipo</h1>
+
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Quantidade</th>
+    </tr>
+
+    {% for q in quant %}
+    <tr>
+        <td>{{ q['nome'] }}</td>
+        <td>{{ q['quantidade'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

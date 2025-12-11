@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Top 10 Contratos Mais Caros com CPV Associado</h1>
+<table border="1">
+    <tr>
+        <th>ID Contrato</th>
+        <th>Preço (€)</th>
+        <th>CPV</th>
+    </tr>
+    {% for d in dados %}
+    <tr>
+        <td>{{ d['idContrato'] }}</td>
+        <td>{{ d['precoContratual'] }}</td>
+        <td>{{ d['cpv_nome'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

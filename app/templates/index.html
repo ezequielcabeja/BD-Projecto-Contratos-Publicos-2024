@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row g-4 mb-5 p-3 bg-white shadow-sm rounded"> 
+    
+    <div class="col-md-6 border-end"> 
+        <div class="pe-4"> 
+            <h6 class="text-muted text-uppercase fw-bold mb-0">Total de Contratos</h6>
+            <p class="fs-4 fw-bold text-primary mb-2">{{ stats.n_contratos }}</p>
+            <a href="/contratos/" class="text-decoration-none small">Ver Lista Completa <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="ps-4"> 
+            <h6 class="text-muted text-uppercase fw-bold mb-0">Valor Contratual Global</h6>
+            <p class="fs-4 fw-bold text-success mb-2">
+                {{ '{:,.2f} €'.format(stats.total_valor) | replace(',', '_temp_') | replace('.', ',') | replace('_temp_', '.') }}
+            </p>
+            <span class="text-muted small">Dados referentes ao total da base de dados.</span>
+        </div>
+    </div>
+</div>
+
+
+<h3 class="mb-4 border-bottom pb-2">Consultas por Dificuldade</h3>
+
+<div class="mb-4 p-3 rounded" style="background-color: #f0fff0; border: 1px solid #d1e7dd;">
+    <h4 class="text-success fw-bold mb-2 mt-0">
+    FÁCEIS
+    </h4>
+    <ul class="list-unstyled mb-0">
+        <li>
+            <a href="/Q1/" class="text-decoration-none text-dark">
+                <i class="bi bi-arrow-right me-2"></i> Tipos de Contratos
+            </a>
+        </li>
+        <li>
+            <a href="/Q2/" class="text-decoration-none text-dark">
+                <i class="bi bi-arrow-right me-2"></i> Entidade a começar por F
+            </a>
+        </li>
+        <li>
+            <a href="/Q3/" class="text-decoration-none text-dark">
+                <i class="bi bi-arrow-right me-2"></i> Preço Contratual por País
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="mb-4 p-3 rounded" style="background-color: #fffacd; border: 1px solid #ffecb5;">
+    <h4 class="text-warning fw-bold mb-2 mt-0">
+    MÉDIAS
+    </h4>
+    <ul class="list-unstyled mb-0">
+        <li>
+            <a href="/Q4/" class="text-decoration-none text-dark">
+                <i class="bi bi-arrow-right me-2"></i> Quantidade de Contratos por Tipo
+            </a>
+        </li>
+        <li>
+            <a href="/Q5/" class="text-decoration-none text-dark">
+                <i class="bi bi-arrow-right me-2"></i> Total de Contratos Por Entidade Adjudicante
+            </a>
+        </li>
+        <li>
+            <a href="/Q6/" class="text-decoration-none text-dark">
+                <i class="bi bi-arrow-right me-2"></i> Média de Preço Contratual por Tipo de Procedimento
+            </a>
+        </li>
+        <li>
+            <a href="/Q7/" class="text-decoration-none text-dark">
+                <i class="bi bi-arrow-right me-2"></i> Número de Contratos Celebrados por Mês
+            </a>
+        </li>
+        <li>
+            <a href="/Q8/" class="text-decoration-none text-dark">
+                <i class="bi bi-arrow-right me-2"></i> Contratos com Preço Superior à Média Global
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="mb-4 p-3 rounded" style="background-color: #fffafa; border: 1px solid #f8d7da;">
+    <h4 class="text-danger fw-bold mb-2 mt-0">
+    DIFÍCEIS
+    </h4>
+    <ul class="list-unstyled mb-0">
+        <li>
+            <a href="/Q9/" class="text-decoration-none text-dark">
+                <i class="bi bi-arrow-right me-2"></i> TOP 10 Contratos Mais Caros com CPV Associado
+            </a>
+        </li>
+        <li>
+            <a href="/Q10/" class="text-decoration-none text-dark">
+                <i class="bi bi-arrow-right me-2"></i> TOP 10 Municipios por Soma do Preço Contratual
+            </a>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}

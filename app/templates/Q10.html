@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Top 10 Municípios por Soma do Preço Contratual</h1>
+<table border="1">
+    <tr>
+        <th>Município</th>
+        <th>Total (€)</th>
+    </tr>
+    {% for d in dados %}
+    <tr>
+        <td>{{ d['municipio'] }}</td>
+        <td>{{ d['total'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

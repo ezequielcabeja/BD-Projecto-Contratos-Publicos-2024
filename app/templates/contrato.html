@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Contrato Nº {{ c['idcontrato'] }}</h1>
+
+<table border="1">
+
+  <tr>
+    <th>Objeto do Contrato</th>
+    <td>{{ c['objetoContrato'] }}</td>
+  </tr>
+
+  <tr>
+    <th>Adjudicante</th>
+    <td>{{ c['adjudicante_id'] }}</td>
+  </tr>
+
+
+  <tr>
+    <th>Data de Publicação</th>
+    <td>{{ c['dataPublicacao'] }}</td>
+  </tr>
+
+  <tr>
+    <th>Data de Celebração</th>
+    <td>{{ c['dataCelebracaoContrato'] }}</td>
+  </tr>
+
+  <tr>
+    <th>Preço Contratual</th>
+    <td>{{ c['precoContratual'] }} €</td>
+  </tr>
+
+  <tr>
+    <th>Prazo de Execução (dias)</th>
+    <td>{{ c['prazoExecucao'] }}</td>
+  </tr>
+
+  <tr>
+    <th>Procedimento Centralizado</th>
+    <td>{{ c['ProcedimentoCentralizado'] }}</td>
+  </tr>
+
+  <tr>
+    <th>Acordo Quadro ID</th>
+    <td>{{ c['AcordoQuadro_id'] }}</td>
+  </tr>
+
+
+</table>
+<br>
+
+
+<a href="{{ voltar }}">⬅ Voltar</a>
+
+{% endblock %}

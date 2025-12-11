@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Número de Contratos por Mês</h1>
+<table border="1">
+    <tr>
+        <th>Mês</th>
+        <th>Total de Contratos</th>
+    </tr>
+    {% for d in dados %}
+    <tr>
+        <td>{{ d['mes'] }}</td>
+        <td>{{ d['total'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Tipos de Contratos</h1>
+
+<table border="1">
+
+  {% for t in tipos %}
+  <tr>
+    <td>{{ t['nome'] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

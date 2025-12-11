@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Entidades que comecem por F</h1>
+
+<table border="1">
+    <tr>
+        <th>Entidade</th>
+    </tr>
+
+    {% for e in entidade %}
+    <tr>
+        <td>{{ e['designacao'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

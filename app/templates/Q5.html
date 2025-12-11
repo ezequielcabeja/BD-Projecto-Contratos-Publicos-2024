@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Total de Contratos por Entidade Adjudicante</h1>
+<table border="1">
+    <tr>
+        <th>Entidade</th>
+        <th>Total de Contratos</th>
+    </tr>
+    {% for d in dados %}
+    <tr>
+        <td>{{ d['entidade'] }}</td>
+        <td>{{ d['total'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Lista de Contratos</h1>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Objeto</th>
+    <th>Preço</th>
+    <th>Data</th>
+  </tr>
+
+  {% for c in contratos %}
+  <tr>
+    <td>
+      <a href="/contratos/{{ c['idContrato'] }}/">
+        {{ c['idContrato'] }}
+      </a>
+    </td>
+    <td>{{ c['objetoContrato'] }}</td>
+    <td>{{ c['precoContratual'] }} €</td>
+    <td>{{ c['dataCelebracaoContrato'] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

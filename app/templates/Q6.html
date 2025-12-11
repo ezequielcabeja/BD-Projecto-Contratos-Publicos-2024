@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Média do Preço Contratual por Tipo de Procedimento</h1>
+<table border="1">
+    <tr>
+        <th>Procedimento</th>
+        <th>Média (€)</th>
+    </tr>
+    {% for d in dados %}
+    <tr>
+        <td>{{ d['procedimento'] }}</td>
+        <td>{{ d['media_preco'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

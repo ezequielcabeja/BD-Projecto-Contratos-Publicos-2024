@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Soma dos Preços Contratuais por País</h1>
+
+<table border="1">
+    <tr>
+        <th>País</th>
+        <th>Total (€)</th>
+    </tr>
+
+    {% for p in preco %}
+    <tr>
+        <td>{{ p['pais'] }}</td>
+        <td>{{ "%.2f"|format(p['total_preco']) }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
