@@ -49,7 +49,7 @@ Seguindo os padrões da 3ª Forma Normal (3ªFN).
 ├── /modelagem
 │   ├── Contratos_Publicos.drawio     # Modelo ER
 ├── /povoamento
-│   ├── Scheme.sql                    # Script para criar as tabelas
+│   ├── Scheme.py                     # Script para criar as tabelas
 │   └── Seed.py                       # Script para povoamento automatico do banco de dados
 ├── /static
 │   ├──style.css
