@@ -82,7 +82,7 @@ Seguindo os padrões da 3ª Forma Normal (3ªFN).
 
 2.  Instale as Bibliotecas Necessárias:
     ```
-    pip install pandas flask 
+    pip install pandas flask openpyxl
     ```
 
 3. Criação e Povoamento do Banco de Dados:
@@ -95,9 +95,14 @@ Seguindo os padrões da 3ª Forma Normal (3ªFN).
     python povoamento/Seed.py
     ```
 
-3. Inicie a Interface Web:
+4. Entre no diretório da interface:
     ```
-    python interface/server.py
+    cd ./interface
+    ```
+
+5. Inicie a Interface Web:
+    ```
+    python server.py
     ```
 A aplicação estará disponível no navegador através do endereço http://127.0.0.1:9000
 
