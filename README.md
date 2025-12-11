@@ -74,7 +74,7 @@ Seguindo os padrões da 3ª Forma Normal (3ªFN).
 
 ### Passo a Passo
 1. Clone o Repositório:
-  - Baixe pelo link https://github.com/ezequielcabeja/BD-Projecto-Contratos-Publicos-2024.git
+  - Baixe pelo link https://github.com/vituvvl/BD-Projecto-Contratos-Publicos-2024.git
   - Extraia o .zip e entre no diretório
     ```
     cd BD-Projecto-Contratos-Publicos-2024
@@ -102,7 +102,7 @@ Seguindo os padrões da 3ª Forma Normal (3ªFN).
 A aplicação estará disponível no navegador através do endereço http://127.0.0.1:9000
 
 ## Participantes do Projeto 
+- [Victor de Vargas Lopes](https://github.com/vituvvl) (up202400863)
 - [Ezequiel Tchimbaya Cachapeu Paulo](https://github.com/ezequielcabeja) (up202400891)
 - [Sérgio Gomes Pinto](https://github.com/sergiogp12) (up202309160)
-- [Victor de Vargas Lopes](https://github.com/vituvvl) (up202400863)
 
